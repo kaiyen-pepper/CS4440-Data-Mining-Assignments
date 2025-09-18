@@ -54,8 +54,9 @@ for x in range(len(docTermMatrix)):
       tempCosine = cosine_similarity([docTermMatrix[x]], [docTermMatrix[y]])[0][0]
       if tempCosine > highestSimilarity:
          highestSimilarity = tempCosine
-         documentPair = [x, y]         
+         documentPair = [x+1, y+1]         
 
 # Print the highest cosine similarity following the information below
 # The most similar documents are document 10 and document 100 with cosine similarity = x
+
 print(f"The most similar documents are document {documentPair[0]} and document {documentPair[1]} with cosine similarity = {highestSimilarity}.")
